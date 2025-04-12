@@ -1,0 +1,52 @@
+<!-- Start Screen -->
+<section *ngIf="screen === 'start'" class="done-screen">
+  <div class="waveform-box">
+    <div class="mic-circle">
+      <i class="mic-icon">🎤</i>
+    </div>
+    <div class="action-buttons">
+      <br><br><br>
+      <button class="center-button" (click)="startRecording()">🎙️</button>
+      <h2 class="play-label">Tap to Start Recording</h2>
+    </div>
+  </div>
+</section>
+
+<!-- Recording Screen -->
+<section *ngIf="screen === 'recording'" class="done-screen">
+  <div class="waveform-box">
+    <div class="mic-circle">
+      <i class="mic-icon">🎤</i>
+    </div>
+    <div class="waveform">
+      <svg height="60" width="100%" style="margin-bottom: 10px;">
+        <path
+          [attr.d]="wavePath"
+          stroke="#000"
+          stroke-width="2"
+          fill="none"
+        ></path>
+      </svg>
+      <div class="duration">Recording...</div>
+    </div>
+  </div>
+</section>
+
+<!-- Done Screen -->
+<section *ngIf="screen === 'done'" class="done-screen">
+  <div class="waveform-box">
+    <div class="mic-circle">
+      <i class="mic-icon">🎤</i>
+    </div>
+    <div class="waveform">
+      <div class="bars">
+        <div *ngFor="let bar of bars" class="bar" [style.height.px]="bar"></div>
+      </div>
+      <button class="cancel-btn" (click)="cancel()">X</button>
+    </div>
+    <div class="action-buttons">
+      <button class="play-button" (click)="playAudio()">></button>
+      <div class="play-label">Tap to play</div>
+    </div>
+  </div>
+</section>

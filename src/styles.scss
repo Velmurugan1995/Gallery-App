@@ -1,0 +1,25 @@
+$primary_color: #f80759;
+$secondary_color: #f4588c;
+$count_color: #666;
+$white_color: white;
+$light_grey: #eee;
+$dot_color: #bbb;
+
+$philosopher_font: "philosopher";
+$lobster_font: "lobster";
+
+html,
+body {
+  background: radial-gradient(circle at top left, $secondary_color 0%, transparent 15%),
+    radial-gradient(circle at bottom right, $secondary_color 0%, transparent 15%);
+}
+
+@font-face {
+  font-family: 'philosopher';
+  src: url('../../app/src/assets/fonts/philosopher/Philosopher-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'lobster';
+  src: url('../../app/src/assets/fonts/lobster/Lobster-Regular.ttf') format('truetype');
+}

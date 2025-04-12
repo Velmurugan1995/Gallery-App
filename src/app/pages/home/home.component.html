@@ -1,0 +1,40 @@
+<div class="wrapper">
+  <!--Header-->
+  <header class="bg-light">
+    <section class="container py-3">
+      <div class="d-flex flex-column flex-md-row align-items-center justify-content-between text-center text-md-start">
+        <h3 class="mb-3 mb-md-0 logo">Matrimony</h3>
+        <div class="d-none d-md-flex gap-3">
+          <span class="clickable-span" [routerLink]="'gallery'">Gallery</span>
+          <span class="clickable-span" [routerLink]="'audio'">Audio</span>
+        </div>
+      </div>
+    </section>
+  </header>
+  <!--Menu-->
+  <section class="d-md-none">
+    <div class="container py-3">
+      <div class="d-flex justify-content-center gap-3">
+        <a [routerLink]="'gallery'" class="btn btn-outline-secondary">
+          <i class="fas fa-image"></i> Gallery
+        </a>
+
+        <a [routerLink]="'audio'" class="btn btn-outline-secondary">
+          <i class="fas fa-music"></i> Audio
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!--Main Content-->
+  <div class="bg-main-content main-content container">
+    <router-outlet></router-outlet>
+  </div>
+
+  <!--Footer-->
+  <footer class="bg-light py-3">
+    <div class="container d-flex justify-center align-items-center">
+      <span class="text-muted">© 2025 matrimony.com</span>
+    </div>
+  </footer>
+</div>

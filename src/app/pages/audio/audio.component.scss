@@ -1,0 +1,140 @@
+@import '../../../styles.scss';
+
+.done-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+
+  .waveform-box {
+    position: relative;
+    border: 1px solid $light_grey;
+    border-radius: 16px;
+    padding: 20px;
+    width: 90%;
+    max-width: 350px;
+    background-color: $white_color;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+    height: 200px;
+
+    .mic-circle {
+      position: absolute;
+      top: -25px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: $white_color;
+      border: 2px solid $light_grey;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .mic-icon {
+        color: $primary_color;
+        font-size: 24px;
+      }
+    }
+
+    .action-buttons {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 68px;
+      grid-gap: 10px;
+      gap: 10px;
+
+      .center-button {
+        background-color: $primary_color;
+        background-image: linear-gradient(45deg, $primary_color, $secondary_color);
+        border: none;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        color: white;
+        font-size: 20px;
+        cursor: pointer;
+      }
+
+
+
+      .play-label {
+        margin-top: 5px;
+        color: $count_color;
+        font-size: 14px;
+        font-family: $philosopher_font;
+      }
+
+      .play-button {
+        background-color: $primary_color;
+        background-image: linear-gradient(45deg, $primary_color, $secondary_color);
+        border: none;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        color: $white_color;
+        font-size: 20px;
+        cursor: pointer;
+      }
+    }
+
+    .waveform {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 30px;
+      position: relative;
+
+
+      .bars {
+        display: flex;
+        align-items: flex-end;
+        height: 40px;
+        margin-bottom: 10px;
+        gap: 2px;
+      }
+
+      .bar {
+        width: 4px;
+        margin: 0 1px;
+        background-color: $primary_color;
+        transition: height 0.1s ease-in-out;
+        max-height: 40px;
+      }
+
+      .cancel-btn {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        border: none;
+        background: none;
+        font-size: 20px;
+        cursor: pointer;
+        color: $primary_color !important;
+      }
+    }
+
+    .duration {
+      font-weight: bold;
+      margin-bottom: 10px;
+      font-family: $philosopher_font;
+    }
+
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

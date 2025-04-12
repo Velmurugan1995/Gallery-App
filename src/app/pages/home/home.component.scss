@@ -1,0 +1,28 @@
+@import '../../../styles.scss';
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  .logo{
+    font-family: $lobster_font;
+    font-style: italic;
+    color: $primary_color;
+    letter-spacing: 1px;
+  }
+  .clickable-span {
+    cursor: pointer;
+    font-family: $philosopher_font;
+    letter-spacing: 2px;
+    font-size: 16px;
+  }
+  .text-muted{
+    font-family: $philosopher_font;
+  }
+}
+
+.main-content {
+  flex: 1;
+  padding: 2rem 0;
+}
+
+

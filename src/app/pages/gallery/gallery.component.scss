@@ -1,0 +1,121 @@
+@import '../../../styles.scss';
+
+.swiper-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+  overflow: hidden;
+
+  .arrow.left {
+    left: 10px;
+  }
+
+  .arrow.right {
+    right: 10px;
+  }
+
+  .arrow:disabled {
+    opacity: 0.3;
+    pointer-events: none;
+  }
+
+  .slider {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+
+    .slide {
+      flex: 0 0 100%;
+      max-width: 100%;
+      position: relative;
+
+      img {
+        width: 100%;
+        max-height: 480px;
+        height: auto;
+        object-fit: contain;
+        border-radius: 8px;
+        transition: transform 0.3s ease;
+      }
+
+
+      :hover {
+        transform: scale(1.05);
+      }
+    }
+
+  }
+
+
+  .count-display {
+    font-size: 16px;
+    color: $count_color;
+    margin-top: 6px;
+  }
+
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    background-color: $primary_color;
+    color: $white_color;
+    border: none;
+    font-size: 20px;
+    padding: 6px 14px;
+    border-radius: 50%;
+    cursor: pointer;
+    user-select: none;
+
+
+  }
+
+  .dots {
+    text-align: center;
+
+    .dot {
+      height: 14px;
+      width: 14px;
+      margin: 0 6px;
+      background-color: $dot_color;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.3s;
+      cursor: pointer;
+    }
+
+
+    .active {
+      background-color: $primary_color;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 768px) {
+  .slide {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}

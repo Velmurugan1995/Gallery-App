@@ -1,0 +1,57 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-10">
+      <div class="swiper-container text-center position-relative">
+        <!-- Left Arrow -->
+        <button
+          class="arrow left"
+          (click)="prevSlide()"
+          [disabled]="currentIndex === 0"
+        >
+          &#10094;
+        </button>
+
+        <!-- Slider -->
+        <div
+          #slider
+          class="slider d-flex"
+          (mousedown)="onTouchStart($event)"
+          (mousemove)="onTouchMove($event)"
+          (mouseup)="onTouchEnd($event)"
+          (mouseleave)="onTouchEnd($event)"
+          (touchstart)="onTouchStart($event)"
+          (touchmove)="onTouchMove($event)"
+          (touchend)="onTouchEnd($event)"
+        >
+          <div class="slide" *ngFor="let image of images">
+            <img [src]="image" alt="Slide" class="img-fluid"/>
+          </div>
+        </div>
+
+        <!-- Right Arrow -->
+        <button
+          class="arrow right"
+          (click)="nextSlide()"
+          [disabled]="currentIndex === images.length - 1"
+        >
+          &#10095;
+        </button>
+
+        <!-- Slide Counter -->
+        <div class="count-display mt-2">
+          {{ currentIndex + 1 }} / {{ images.length }}
+        </div>
+
+        <!-- Dots -->
+        <div class="dots mt-2">
+          <span
+            *ngFor="let i of images; index as idx"
+            class="dot"
+            [class.active]="idx === currentIndex"
+            (click)="goToSlide(idx)"
+          ></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
